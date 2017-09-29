@@ -12,9 +12,7 @@ end
   Quando(/^faço login com a conta:$/) do |table|
     @user = table.rows_hash
 
-    @login_po.email.set @user['Email']
-    @login_po.password.set @user['Senha']
-    @login_po.sign_in.click
+    @login_po.do_login(@user)
     
   end
   
