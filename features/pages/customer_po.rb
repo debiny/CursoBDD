@@ -12,4 +12,16 @@ class CustomersPage < SitePrism::Page
     element :submit, '#form-submit-button'
     element :submit_cancel, '#form-cancel-button'
 
+    element :search_text, 'input[name=search]'
+    element :search_button, '#dataview-search-button'
+
+    element :list, '#dataview-table tbody'
+    elements :lines, '#dataview-table tbody tr'
+
+    element :modal, '.showSweetAlert'
+    element :modal_ok, '.showSweetAlert .confirm'
+
+    elements :remove_icon, '#dataview-table tbody .fa-trash-o'
+    element :modal_yes, '.modal .btn-danger'
+
 end

@@ -1,0 +1,6 @@
+---
+default: --format progress -p html -p headless
+html: --format html --out=reports/features.html
+firefox: BROWSER=firefox
+chrome: BROWSER=chrome
+headless: BROWSER=phantomjs

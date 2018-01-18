@@ -15,4 +15,15 @@ module Helpers
 
         @customer_po.submit.click
     end
+
+    def remove_customer(customer)
+        @customer_po.search_text.set customer['Email']
+        @customer_po.search_button.click
+
+        @customer_po.lines.each do|reg|
+            @customer_po.remove_icon.first.click
+            @customer_po.modal_yes.click    
+        end
+
+    end
 end
